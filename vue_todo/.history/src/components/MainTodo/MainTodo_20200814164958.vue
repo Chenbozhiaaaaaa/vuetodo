@@ -9,15 +9,10 @@
       @keyup.enter="addTodo"
       v-model="content"
     />
-    <div class="maxheight" style="max-height:350px; overflow-y: auto">
-      <TodoItem
-        v-for="(item,index) in fliterData"
-        :key="index"
-        :todo="item"
-        @del="handleDeleteItem"
-      />
-    </div>
-
+  <div style="max-height:350px; overflow-y: auto">
+    <TodoItem v-for="(item,index) in fliterData" :key="index" :todo="item" @del="handleDeleteItem" />
+  </div>
+    
     <TodoInfo :total="total" @toggleState="handletoggleState" @clearCompleted="handlerClear" />
   </div>
 </template>
@@ -37,7 +32,7 @@ export default {
       todoData: [],
       content: "",
       total: 0,
-      filter: "all",
+      filter:"all",
     };
   },
   watch: {
@@ -57,6 +52,7 @@ export default {
           return this.todoData;
           break;
         case "active":
+       
           return this.todoData.filter((item) => item.completed == false);
           break;
         case "completed":
@@ -84,9 +80,9 @@ export default {
     handletoggleState(state) {
       this.filter = state;
     },
-    handlerClear() {
-      this.todoData = this.todoData.filter((item) => item.completed == false);
-    },
+    handlerClear(){
+      this.todoData = this.todoData.filter(item=>item.completed==false)
+    }
   },
 };
 </script>
@@ -108,9 +104,4 @@ export default {
   outline: none;
   box-sizing: border-box;
 }
-.main::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
 </style>

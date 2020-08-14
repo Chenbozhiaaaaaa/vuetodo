@@ -2,7 +2,7 @@
 <template>
   <div :class="['todo-item',todo.completed?'completed':'']">
     <input type="checkbox" v-model="todo.completed" />
-    <label>{{todo.content}}</label>
+    <label class="maxheight">{{todo.content}}</label>
     <button @click="delItem" class="btn"></button>
   </div>
 </template>

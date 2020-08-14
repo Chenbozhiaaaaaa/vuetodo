@@ -27,7 +27,7 @@ export default {
   padding: 10px;
   font-size: 24px;
   border-top: 1px solid rgb(0,0,0,.1);
-  max-height:200px
+ 
 }
 .todo-item:hover .btn::after {
   content: "x";
