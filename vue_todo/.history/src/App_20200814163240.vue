@@ -3,7 +3,6 @@
   <div>
     <MainHeader />
   <MainTodo />
-  <MainFooter />
   </div>
 </template>
 

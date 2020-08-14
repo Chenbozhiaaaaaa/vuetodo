@@ -9,8 +9,9 @@
       @keyup.enter="addTodo"
       v-model="content"
     />
+    {{fliterData}}
     <TodoItem v-for="(item,index) in fliterData" :key="index" :todo="item" @del="handleDeleteItem" />
-    <TodoInfo :total="total" @toggleState="handletoggleState" @clearCompleted="handlerClear" />
+    <TodoInfo :total="total" @toggleState="handletoggleState" />
   </div>
 </template>
 
@@ -77,9 +78,6 @@ export default {
     handletoggleState(state) {
       this.filter = state;
     },
-    handlerClear(){
-      this.todoData = this.todoData.filter(item=>item.completed==false)
-    }
   },
 };
 </script>

@@ -59,7 +59,7 @@ export default {
   cursor: pointer;
 }
 .actived {
-  background-color:rgb(252, 157, 154);
+  background-color: #ef2096;
   color: #fff;
 }
 .clear {

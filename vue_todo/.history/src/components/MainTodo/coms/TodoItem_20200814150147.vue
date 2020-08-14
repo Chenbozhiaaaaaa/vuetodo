@@ -1,9 +1,9 @@
 <!--  -->
 <template>
-  <div :class="['todo-item',todo.completed?'completed':'']">
-    <input type="checkbox" v-model="todo.completed" />
+  <div class="todo-item">
+    <input type="checkbox" />
     <label>{{todo.content}}</label>
-    <button @click="delItem" class="btn"></button>
+    <button class="btn"></button>
   </div>
 </template>
 
@@ -12,11 +12,6 @@ export default {
   name: "TodoItem",
   props:{
       todo:Object
-  },
-  methods:{
-      delItem(){
-          this.$emit('del',this.todo.id)
-      }
   }
 };
 </script>
@@ -39,7 +34,7 @@ label {
   transition: color 0.4s;
   font-style: inherit;
 }
-.completed {
+.compalted {
   color: #d9d9d9;
   text-decoration: line-through;
 }

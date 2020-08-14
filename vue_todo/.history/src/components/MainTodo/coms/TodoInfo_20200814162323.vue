@@ -10,7 +10,7 @@
         @click="toggleState(item)"
       >{{item}}</a>
     </div>
-    <button class="clear" @click="clearCompleted">Clear Completed</button>
+    <button class="clear" @click="clearCompleted">445</button>
   </div>
 </template>
 
@@ -59,11 +59,11 @@ export default {
   cursor: pointer;
 }
 .actived {
-  background-color:rgb(252, 157, 154);
+  background-color: #ef2096;
   color: #fff;
 }
 .clear {
-  background-color: rgb(131, 175, 155);
+  background-color: #ef2096;
   color: #fff;
   font-weight: bold;
   border-radius: 5px;

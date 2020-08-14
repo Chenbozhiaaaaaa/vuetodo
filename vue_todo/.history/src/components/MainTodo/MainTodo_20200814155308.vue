@@ -10,7 +10,7 @@
       v-model="content"
     />
     <TodoItem v-for="(item,index) in fliterData" :key="index" :todo="item" @del="handleDeleteItem" />
-    <TodoInfo :total="total" @toggleState="handletoggleState" @clearCompleted="handlerClear" />
+    <TodoInfo :total="total" @toggleState="handletoggleState" />
   </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
       todoData: [],
       content: "",
       total: 0,
-      filter:"all",
+      filter: "all",
     };
   },
   watch: {
@@ -49,11 +49,10 @@ export default {
           return this.todoData;
           break;
         case "active":
-       
-          return this.todoData.filter((item) => item.completed == false);
+          return this.todoData.filter((item) => item.compelted == false);
           break;
         case "completed":
-          return this.todoData.filter((item) => item.completed == true);
+          return this.todoData.filter((item) => item.compelted == true);
           break;
       }
     },
@@ -77,9 +76,6 @@ export default {
     handletoggleState(state) {
       this.filter = state;
     },
-    handlerClear(){
-      this.todoData = this.todoData.filter(item=>item.completed==false)
-    }
   },
 };
 </script>

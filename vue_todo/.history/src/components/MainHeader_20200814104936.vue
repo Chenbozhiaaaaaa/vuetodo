@@ -14,13 +14,11 @@ export default {
 <style scoped>
 .mainHeader {
     text-align: center;
-   
 }
 .mainHeader h1 {
-    margin: 20px;
-    font-size: 100px;
-    font-weight: 100;
-    color: rgb(252, 157, 154);
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1)
+    font-size: 60px;
+    font-weight:  800;
+    color: rgb(255, 81, 156, .8);
+    text-shadow: 4px 4px 4px #222;
 }
 </style>

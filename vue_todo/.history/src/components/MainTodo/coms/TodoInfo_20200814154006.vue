@@ -3,38 +3,27 @@
   <div class="todo-info">
     <span class="total">{{total}}</span>
     <div class="tabs">
-      <a
-        :class="[state==item?'actived':'']"
-        v-for="(item,index) in states"
-        :key="index"
-        @click="toggleState(item)"
-      >{{item}}</a>
+      <a v-for="(item,index) in states" :key="index" @click="toggleState(item)">{{item}}</a>
     </div>
-    <button class="clear" @click="clearCompleted">Clear Completed</button>
+    <button class="clear">445</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "TodoInfo",
-  props: {
-    total: Number,
+  props:{
+      total:Number
   },
   data() {
     return {
       states: ["all", "active", "completed"],
-      state: "all",
+       state: "all"
     };
   },
-  methods: {
-    toggleState(state) {
-      this.state = state;
-      this.$emit("toggleState", state);
-    },
-    clearCompleted() {
-        this.$emit('clearCompleted')
-    },
-  },
+
+
+  methods: {},
 };
 </script>
 <style scoped>
@@ -52,18 +41,18 @@ export default {
   justify-content: space-between;
   width: 200px;
 }
-.tabs a {
-  padding: 2px 5px;
+.tabs a{
+      padding: 2px 5px;
   border: 1px solid #ef2096;
   border-radius: 5px;
   cursor: pointer;
 }
 .actived {
-  background-color:rgb(252, 157, 154);
+  background-color: #ef2096;
   color: #fff;
 }
 .clear {
-  background-color: rgb(131, 175, 155);
+  background-color: #ef2096;
   color: #fff;
   font-weight: bold;
   border-radius: 5px;

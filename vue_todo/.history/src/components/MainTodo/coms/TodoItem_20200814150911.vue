@@ -1,7 +1,7 @@
 <!--  -->
 <template>
-  <div :class="['todo-item',todo.completed?'completed':'']">
-    <input type="checkbox" v-model="todo.completed" />
+  <div :class="['todo-item',todo.compalted?'compalted':'']">
+    <input type="checkbox" v-model="todo.compalted" />
     <label>{{todo.content}}</label>
     <button @click="delItem" class="btn"></button>
   </div>
@@ -39,7 +39,7 @@ label {
   transition: color 0.4s;
   font-style: inherit;
 }
-.completed {
+.compalted {
   color: #d9d9d9;
   text-decoration: line-through;
 }

@@ -63,7 +63,7 @@ export default {
   color: #fff;
 }
 .clear {
-  background-color: rgb(131, 175, 155);
+  background-color: rgb(200, 200, 169);
   color: #fff;
   font-weight: bold;
   border-radius: 5px;

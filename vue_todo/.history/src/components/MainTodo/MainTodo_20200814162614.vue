@@ -9,6 +9,7 @@
       @keyup.enter="addTodo"
       v-model="content"
     />
+    {{fliterData}}
     <TodoItem v-for="(item,index) in fliterData" :key="index" :todo="item" @del="handleDeleteItem" />
     <TodoInfo :total="total" @toggleState="handletoggleState" @clearCompleted="handlerClear" />
   </div>
